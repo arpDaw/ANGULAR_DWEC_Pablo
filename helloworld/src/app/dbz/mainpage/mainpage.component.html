@@ -1,0 +1,41 @@
+<div class="header">
+  <h1>Dragon Ball Z</h1>
+  <hr />
+</div>
+
+<div class="main">
+  <div class="indicaciones">
+    <span class="title1">Personajes</span>
+    <span class="title2">Agregar nuevo Personaje</span>
+  </div>
+  <hr />
+  <div class="personajes">
+    <ul class="lista-personajes">
+      <li *ngFor="let personaje of personajes">
+        {{ personaje.nombre }} ->{{ personaje.poder }}
+      </li>
+    </ul>
+
+    <form (ngSubmit)="agregar()" class="add-personaje">
+      <input
+        type="text"
+        name="nombre"
+        id="nombre"
+        class="nombre"
+        name="nombre"
+        [(ngModel)]="nuevo.nombre"
+      />
+      <br />
+      <input
+        type="number"
+        name="poder"
+        id="poder"
+        class="poder"
+        name="poder"
+        [(ngModel)]="nuevo.poder"
+      />
+      <br />
+      <button>Agregar</button>
+    </form>
+  </div>
+</div>

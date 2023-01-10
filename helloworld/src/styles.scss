@@ -1,1 +1,69 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    }
+    html, body {
+    background: white;
+    background-color: #ee652a;
+    margin: 20px;
+    color: #072083;
+    -webkit-font-smoothing: antialiased;
+    }
+    hr{
+    color: #020b2c;
+    font-weight: bolder;
+    }
+    dd {
+    font-weight: bold;
+    }
+    button {
+    background-color: #020b2c;
+    border-radius: 5px;
+    border: 0px;
+    color: white;
+    cursor: pointer;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 5px 10px;
+    }
+    button:hover {
+    background-color: #2f3d6e;
+    
+}
+button:focus{
+outline: none;
+}
+.p-1 {
+padding: 1px;
+}
+
+.indicaciones{
+    display: flex;
+    justify-content: space-between;
+}
+.title1{
+    width: 100%;
+}
+.title2{
+    width: 100%;
+}
+
+.personajes{
+    display: flex;
+    justify-content: space-between;
+}
+
+.lista-personajes{
+    width: 100%;
+    list-style: none;
+}
+
+.add-personaje{
+    width: 100%;
+}
+
+input{
+    margin: 2px;
+}
