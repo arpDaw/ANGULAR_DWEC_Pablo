@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import {Personaje} from   '../interfaces/dbz.interfaces'
+import { DbzService } from '../services/dbz.service';
 
 
 @Component({
@@ -9,7 +10,14 @@ import {Personaje} from   '../interfaces/dbz.interfaces'
 })
 export class PersonajesComponent {
 
-   @Input() personajes:Personaje[] = [];
-   @Input() nuevo:Personaje[] = [];
+  //  @Input() personajes:Personaje[] = [];
+  //  @Input() nuevo:Personaje[] = [];
+  get personajes(){
+    return this.DbzService.personajes
+  }
+
+  constructor(private DbzService: DbzService){
+    
+  }
 
 }
