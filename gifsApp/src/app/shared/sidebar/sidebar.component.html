@@ -5,7 +5,10 @@
   <div class="list-group list-reset">
     <a href="" class="list-group-item list list list-group-item-action"
       ><ul>
-        <li *ngFor="let busqueda of _historial"></li></ul
-    ></a>
+        <li *ngFor="let gif of gifs">
+          {{ gif | titlecase }}
+        </li>
+      </ul></a
+    >
   </div>
 </div>
