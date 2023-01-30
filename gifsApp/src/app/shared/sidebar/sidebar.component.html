@@ -3,12 +3,13 @@
   <hr class="text-white" />
 
   <div class="list-group list-reset">
-    <a href="" class="list-group-item list list list-group-item-action"
-      ><ul>
-        <li *ngFor="let gif of gifs">
-          {{ gif | titlecase }}
-        </li>
-      </ul></a
+    <a
+      href="#"
+      class="list-group-item list list list-group-item-action"
+      *ngFor="let gif of gifs"
+      (click)="buscar(gif)"
     >
+      {{ gif | titlecase }}
+    </a>
   </div>
 </div>
