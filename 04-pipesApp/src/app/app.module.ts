@@ -10,6 +10,7 @@ import { AppRouterModule } from './app-router.module';
 
 import { PipesComponent } from './pipes/pipes.component';
 import { CardComponent } from './card/card.component';
+import { VentasModule } from './ventas/ventas.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CardComponent } from './card/card.component';
     BrowserModule,
     PrimengModule,
     SharedModule,
-    AppRouterModule
+    AppRouterModule,
+    VentasModule
   ],
   providers: [],
   bootstrap: [AppComponent]

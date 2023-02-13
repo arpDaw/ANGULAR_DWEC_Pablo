@@ -9,7 +9,7 @@ import { OrdenarComponent } from './ventas/pages/ordenar/ordenar.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'basicos',
     component: BasicosComponent,
     pathMatch: 'full'
   },
