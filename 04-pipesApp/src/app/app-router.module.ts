@@ -22,6 +22,7 @@ const routes: Routes = [
     path: 'no-comunes',
     component: NoComunesComponent,
     
+    
   },
   {
     path: 'ordenar',
