@@ -6,7 +6,11 @@
 <div class="grid">
   <div class="col">
     <p-fieldset legend="i18nSelect Pipe" [toggleable]="true">
-      Content
+      Saludos {{ personas[iPersona].nombre }}, es un placer
+      {{ personas[iPersona].genero | i18nSelect : inviteMap }}
+      a nuestro evento.
+      <br />
+      <button (click)="cambiarPersona()">Cambiar Persona</button>
     </p-fieldset>
   </div>
 </div>
@@ -17,7 +21,45 @@
       [toggleable]="true"
       [transitionOptions]="'2s'"
     >
-      Content
+      Actualmente tenemos {{ clientes.length }}
+      {{ clientes.length | i18nPlural : clientesMap }} esperando
+    </p-fieldset>
+  </div>
+</div>
+<div class="grid">
+  <div class="col">
+    <p-fieldset
+      legend="i18nPlural"
+      [toggleable]="true"
+      [transitionOptions]="'2s'"
+    >
+      Actualmente
+      {{ clientes2.length | i18nPlural : clientes2Map }} esperando
+    </p-fieldset>
+  </div>
+</div>
+<div class="grid">
+  <div class="col">
+    <p-fieldset
+      legend="i18nPlural"
+      [toggleable]="true"
+      [transitionOptions]="'2s'"
+    >
+      Actualmente {{ clientes3.length | i18nPlural : clientes3Map }}
+      esperando
+    </p-fieldset>
+  </div>
+</div>
+<div class="grid">
+  <div class="col">
+    <p-fieldset
+      legend="i18nPlural"
+      [toggleable]="true"
+      [transitionOptions]="'2s'"
+    >
+      Actualmente tenemos {{ clientes4.length }}
+      {{ clientes4.length | i18nPlural : clientes4Map }}
+      esperando
     </p-fieldset>
   </div>
 </div>
