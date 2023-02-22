@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-no-comunes',
@@ -23,21 +24,40 @@ export class NoComunesComponent {
   }
 
   quitarCliente(){
+    this.clientes.shift()
 
   }
+  persona = {
+    Nombre: 'Toni',
+    Edad: 36,
+    Direccion: 'Tavernes de la Valldigna'
+  }
  
+  clientes: string[] = ['Carmen', 'Emilio','Pablo', 'Alex','Guille','Pau']
+  clientesMap: any = {'=0': 'no tenemos clientes', 'other': 'tenemos # clientes'}
 
-  clientes: string[] = ['Maria']
-  clientesMap: any = {'=0': 'no tenemos clientes', '=1': 'tenemos un cliente', '=2': 'tenemos dos clientes', 'other': 'clientes'}
+  heroes = [
+    {
+      nombre: 'Superman',
+      vuela: true
+    },
+    {
+      nombre: 'Robin',
+      vuela: false
+    },
+    {
+      nombre: 'Aquaman',
+      vuela: false
+    }
+  ]
 
-  clientes2: string[] =['María', 'Paco']
-  clientes2Map: any = {'=0': 'ningún', '=1': 'cliente', '=2': 'tenemos dos clientes'}
+  miObservable = interval(1000)
 
-  clientes3: string[] =[]
-  clientes3Map: any = {'=0': 'no tenemos clientes', '=1': 'cliente', 'other': 'clientes'}
-
-  clientes4: string[] =['María', 'Paco','a', 'b','c','d']
-  clientes4Map: any = {'=0': 'no tenemos clientes', '=1': 'cliente', 'other': 'clientes'}
+  valorPromesa = new Promise((resolve, reject) =>{
+    setTimeout(()=>{
+      resolve('Tenemos data de promesa')
+    },3500)
+  })
 
   
   constructor(private primengConfig: PrimeNGConfig){}
